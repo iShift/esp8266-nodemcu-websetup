@@ -1,6 +1,4 @@
---Pedro Minatel - 2015-12-13
 print("Starting...")
-
 if pcall(function ()
     print("Open config")
     dofile("config.lc")
@@ -23,7 +21,9 @@ end) then
          tmr.stop(1)
          print("Connected, IP is "..wifi.sta.getip())
         --do your code here
-      end
+        print("Starting payload code")
+        dofile("payload.lua")
+       end
    end)
 else
    print("Enter configuration mode")
